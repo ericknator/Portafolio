@@ -1,58 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Erick Loayza – Portafolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background-color: #f4f4f4;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
       color: #333;
     }
     header {
       background-color: #222;
-      color: white;
-      text-align: center;
+      color: #fff;
       padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
     main {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     h2 {
+      border-bottom: 2px solid #005c99;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
       color: #005c99;
     }
-    ul {
-      list-style: none;
-      padding-left: 1rem;
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    li::before {
-      content: "🔹";
-      margin-right: 0.5rem;
+    .card h3 {
+      margin-top: 0;
     }
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    a {
+    .card a {
       color: #005c99;
       text-decoration: none;
+      font-weight: bold;
     }
-    a:hover {
-      text-decoration: underline;
+    .contact-buttons a {
+      display: inline-block;
+      margin: 0.5rem 1rem 0 0;
+      padding: 0.7rem 1.2rem;
+      background-color: #005c99;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .contact-buttons a:hover {
+      background-color: #004272;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #222;
+      color: white;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Erick Loayza</h1>
     <p>Estudiante de Ingeniería de Software | Arquitecto de Soluciones Comerciales</p>
@@ -61,39 +82,46 @@
   <main>
     <section>
       <h2>Sobre mí</h2>
-      <p>Actualmente estudio Ingeniería de Software en ISIL y trabajo como Arquitecto de Soluciones Comerciales en Atento Perú. Me apasiona la automatización, el desarrollo web y el diseño de soluciones que marquen la diferencia.</p>
+      <p>Actualmente estudio Ingeniería de Software en ISIL y trabajo como Arquitecto de Soluciones Comerciales en Atento Perú. Me especializo en automatización, soluciones digitales personalizadas y mejora de procesos.</p>
     </section>
 
     <section>
-      <h2>Proyectos actuales</h2>
-      <ul>
-        <li>SkillMaps – Plataforma de reclutamiento inteligente para Atento Innova.</li>
-        <li>Plantilla financiera automatizada (Google Sheets + Forms).</li>
-        <li>Mini-agencia de automatización (Zapier, WhatsApp API, Apps Script).</li>
-      </ul>
-    </section>
+      <h2>Proyectos destacados</h2>
 
-    <section>
-      <h2>Stack Tecnológico</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript, Bootstrap, Tailwind</li>
-        <li>Zapier, Google Apps Script, Make</li>
-        <li>Google Sheets, Forms, Airtable</li>
-        <li>Git & GitHub</li>
-      </ul>
+      <div class="card">
+        <h3>SkillMaps</h3>
+        <p>Plataforma inteligente de perfilamiento automático para mejorar el reclutamiento en Atento.</p>
+        <p><strong>Tecnologías:</strong> Google Forms, Sheets, Apps Script</p>
+        <a href="https://github.com/ericknator/SkillMaps" target="_blank">🔗 Ver repositorio</a>
+      </div>
+
+      <div class="card">
+        <h3>Plantilla financiera automatizada</h3>
+        <p>Gestión de ingresos, egresos y presupuestos con Google Sheets + Forms.</p>
+        <p><strong>Tecnologías:</strong> Google Apps Script, Dashboards en Sheets</p>
+        <a href="https://github.com/ericknator/plantilla-finanzas" target="_blank">🔗 Ver repositorio</a>
+      </div>
+
+      <div class="card">
+        <h3>Mini-agencia de automatización</h3>
+        <p>Automatización de procesos comerciales usando Zapier, WhatsApp API y herramientas sin código.</p>
+        <p><strong>Tecnologías:</strong> Zapier, Make, WhatsApp API</p>
+        <a href="https://github.com/ericknator/automatizacion-negocios" target="_blank">🔗 Ver repositorio</a>
+      </div>
     </section>
 
     <section>
       <h2>Contacto</h2>
-      <ul>
-        <li>Email: erickloayza.dev@gmail.com</li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/erickloayza" target="_blank">linkedin.com/in/erickloayza</a></li>
-      </ul>
+      <div class="contact-buttons">
+        <a href="https://wa.me/51923612736" target="_blank">💬 Escríbeme por WhatsApp</a>
+        <a href="https://linkedin.com/in/erickloayza" target="_blank">🔗 Ver mi LinkedIn</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Erick Loayza</p>
+    <p>© 2025 Erick Loayza. Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>
