@@ -27,11 +27,26 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    #scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
 
-  <!-- 🔝 Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Erick Loayza</a>
@@ -48,20 +63,18 @@
     </div>
   </nav>
 
-  <!-- 🧑 Presentación -->
+  <!-- Hero -->
   <header class="hero" data-aos="fade-down">
     <h1>Erick Loayza</h1>
     <p>Estudiante de Ingeniería de Software | Arquitecto de Soluciones Comerciales</p>
   </header>
 
   <main class="container my-5">
-    <!-- Sobre mí -->
     <section id="sobre-mi" class="mb-5" data-aos="fade-up">
       <h2 class="text-primary border-bottom pb-2">Sobre mí</h2>
       <p>Actualmente estudio Ingeniería de Software en ISIL y trabajo como Arquitecto de Soluciones Comerciales en Atento Perú. Me especializo en automatización, soluciones digitales personalizadas y mejora de procesos.</p>
     </section>
 
-    <!-- Proyectos -->
     <section id="proyectos" class="mb-5">
       <h2 class="text-primary border-bottom pb-2" data-aos="fade-right">Proyectos destacados</h2>
       <div class="row g-4">
@@ -106,47 +119,45 @@
       </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- Contacto + Formulario -->
     <section id="contacto" data-aos="fade-up">
       <h2 class="text-primary border-bottom pb-2">Contacto</h2>
-      <div class="d-flex flex-wrap gap-3">
+      <div class="d-flex flex-wrap gap-3 mb-4">
         <a href="https://wa.me/51923612736" target="_blank" class="btn btn-success">💬 WhatsApp</a>
         <a href="https://linkedin.com/in/erickloayza" target="_blank" class="btn btn-primary">🔗 LinkedIn</a>
       </div>
+
+      <!-- Formulario -->
+      <div id="form-success" class="alert alert-success d-none" role="alert">
+        ✅ ¡Gracias! Tu mensaje fue enviado correctamente.
+        <button type="button" class="btn-close float-end" onclick="this.parentElement.classList.add('d-none')"></button>
+      </div>
+
+      <form id="contact-form" action="https://formspree.io/f/xzzrrkzd" method="POST" class="row g-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" name="nombre" id="nombre" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input type="email" name="email" id="correo" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea name="mensaje" id="mensaje" rows="5" class="form-control" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary w-100">📨 Enviar mensaje</button>
+        </div>
+      </form>
     </section>
-<!-- Formulario de contacto -->
-<section id="mensaje" class="mt-5" data-aos="fade-up">
-  <h2 class="text-primary border-bottom pb-2">Envíame un mensaje</h2>
-
-  <!-- Alerta de confirmación -->
-  <div id="form-success" class="alert alert-success d-none" role="alert">
-    ✅ ¡Gracias! Tu mensaje fue enviado correctamente.
-  </div>
-
-  <form id="contact-form" action="https://formspree.io/f/xzzrrkzd" method="POST" class="row g-3">
-    <div class="col-md-6">
-      <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" name="nombre" id="nombre" class="form-control" required>
-    </div>
-    <div class="col-md-6">
-      <label for="correo" class="form-label">Correo electrónico</label>
-      <input type="email" name="email" id="correo" class="form-control" required>
-    </div>
-    <div class="col-12">
-      <label for="mensaje" class="form-label">Mensaje</label>
-      <textarea name="mensaje" id="mensaje" rows="5" class="form-control" required></textarea>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary w-100">📨 Enviar mensaje</button>
-    </div>
-  </form>
-</section>
-
-    
   </main>
 
+  <!-- Botón Scroll Up -->
+  <button id="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
   <footer>
-    <p>© 2025 Erick Loayza – Todos los derechos reservados.</p>
+    <p>Hecho con ❤️ por Erick Loayza &mdash; © 2025</p>
   </footer>
 
   <!-- Scripts -->
@@ -154,30 +165,34 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
 
-  <script>
-  const form = document.getElementById('contact-form');
-  const successMessage = document.getElementById('form-success');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        successMessage.classList.remove('d-none');
-        form.reset();
-      } else {
-        alert('❌ Hubo un error al enviar tu mensaje. Inténtalo más tarde.');
-      }
+    // Mostrar botón scroll up
+    const scrollTopBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
-  });
-</script>
 
+    // Enviar formulario con confirmación
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('form-success');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          successMessage.classList.remove('d-none');
+          form.reset();
+        } else {
+          alert('❌ Hubo un error al enviar tu mensaje. Inténtalo más tarde.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
