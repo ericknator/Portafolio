@@ -32,8 +32,8 @@ Soy estudiante de **Ingeniería de Software en ISIL** y actualmente me desempeñ
 
 ## 📫 Cómo contactarme
 
-- 📧 Email: erickloayza.dev@gmail.com  
-- 🌐 LinkedIn: [linkedin.com/in/erickloayza](https://linkedin.com/in/erickloayza)  
+- 📧 Email: erik.echegaray@gmail.com  
+- 🌐 LinkedIn: [linkedin.com/in/erickloayza](https://www.linkedin.com/in/jesus-loayza/)  
 - ☕ Siempre abierto a nuevas ideas, colaboraciones y aprendizajes.
 
 ---
