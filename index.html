@@ -3,60 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Erick Loayza – Portafolio</title>
+  <title>Erick Loayza – Portafolio Técnico</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    padding-top: 70px;
-    background-color: #f8f9fa;
-  }
-  .hero {
-    background-color: #212529;
-    color: white;
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-  footer {
-    background-color: #212529;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  #scroll-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    display: none;
-    background-color: #0d6efd;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-  }
-  /* Animación sutil para íconos */
-  footer i.bi-code-slash,
-  .icon-hover i {
-    transition: color 0.2s ease-in-out;
-  }
-  footer i.bi-code-slash:hover,
-  .icon-hover:hover i {
-    color: #0d6efd;
-  }
-</style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      padding-top: 70px;
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(135deg, #212529, #343a40);
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    section h2 {
+      font-weight: 600;
+    }
+    .card {
+      border: none;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .card-footer {
+      background: none;
+    }
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    #scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Erick Loayza</a>
@@ -73,54 +88,114 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero" data-aos="fade-down">
+  <header class="hero">
     <h1>Erick Loayza</h1>
-    <p>Estudiante de Ingeniería de Software | Arquitecto de Soluciones Comerciales</p>
+    <p>Desarrollador de soluciones digitales | Analista Comercial</p>
+    <p><a href="https://github.com/ericknator" class="btn btn-outline-light mt-2">Ver perfil en GitHub</a></p>
   </header>
 
   <main class="container my-5">
     <section id="sobre-mi" class="mb-5" data-aos="fade-up">
       <h2 class="text-primary border-bottom pb-2">Sobre mí</h2>
-      <p>Actualmente estudio Ingeniería de Software en ISIL y trabajo como Arquitecto de Soluciones Comerciales en Atento Perú. Me especializo en automatización, soluciones digitales personalizadas y mejora de procesos.</p>
+      <p>Soy Analista Comercial en Atento Perú y fundador de Nordic Studio. Desarrollo soluciones digitales a medida usando Python, React, Android y Google Workspace. Me especializo en automatización y mejora de procesos con enfoque comercial y técnico.</p>
     </section>
 
     <section id="proyectos" class="mb-5">
-      <h2 class="text-primary border-bottom pb-2" data-aos="fade-right">Proyectos destacados</h2>
+      <h2 class="text-primary border-bottom pb-2" data-aos="fade-right">Proyectos Técnicos</h2>
       <div class="row g-4">
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="card h-100 shadow-sm">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">SkillMaps</h5>
-              <p class="card-text">Plataforma inteligente de perfilamiento automático para mejorar el reclutamiento en Atento.</p>
-              <p><strong>Tecnologías:</strong> Google Forms, Sheets, Apps Script</p>
+              <h5 class="card-title">SIGPI – Gestión PNP</h5>
+              <p class="card-text">Sistema para registrar, buscar y exportar pedidos con PDF, Excel y filtros avanzados.</p>
+              <p><strong>Tecnologías:</strong> Python, Tkinter, SQLite</p>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="https://github.com/ericknator/SkillMaps" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
+            <div class="card-footer">
+              <a href="https://github.com/ericknator/sigpi-python" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="card h-100 shadow-sm">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Plantilla financiera</h5>
-              <p class="card-text">Gestión de ingresos, egresos y presupuestos con Google Sheets + Forms.</p>
-              <p><strong>Tecnologías:</strong> Google Apps Script, Dashboards</p>
+              <h5 class="card-title">App Restaurante (Android)</h5>
+              <p class="card-text">App móvil para menús y pedidos en restaurantes. Intuitiva y lista para usar.</p>
+              <p><strong>Tecnologías:</strong> Android Studio, Java, SQLite</p>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="https://github.com/ericknator/plantilla-finanzas" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
+            <div class="card-footer">
+              <a href="https://github.com/ericknator/app-restaurante-android" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-          <div class="card h-100 shadow-sm">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Mini-agencia de automatización</h5>
-              <p class="card-text">Automatización de procesos usando Zapier, WhatsApp API y Make.</p>
-              <p><strong>Tecnologías:</strong> Zapier, Make, WhatsApp API</p>
+              <h5 class="card-title">App Android con Firebase</h5>
+              <p class="card-text">Login con Firebase, cámara, audio y descarga de imágenes en una app móvil completa.</p>
+              <p><strong>Tecnologías:</strong> Android, Firebase, SQLite</p>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="https://github.com/ericknator/automatizacion-negocios" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
+            <div class="card-footer">
+              <a href="https://github.com/ericknator/app-android-firebase" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">GameZone SPA</h5>
+              <p class="card-text">Single Page App para sitios de videojuegos con rutas, props y diseño responsive.</p>
+              <p><strong>Tecnologías:</strong> React, Tailwind, Vite</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com/ericknator/gamezone-spa" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Catálogo de Maquillaje</h5>
+              <p class="card-text">Catálogo digital para ventas, con control de stock y automatización de pedidos.</p>
+              <p><strong>Tecnologías:</strong> Google Sheets, Apps Script</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com/ericknator/catalogo-maquillaje" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Automatización WhatsApp</h5>
+              <p class="card-text">Conecta formularios con WhatsApp Business usando Zapier y Webhooks.</p>
+              <p><strong>Tecnologías:</strong> Zapier, Sheets API</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com/ericknator/whatsapp-zapier" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Dashboard en Sheets</h5>
+              <p class="card-text">Panel de control dinámico con métricas conectadas a formularios y bases de datos.</p>
+              <p><strong>Tecnologías:</strong> Google Sheets, Looker Studio</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com/ericknator/dashboard-sheets" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">QA Testing</h5>
+              <p class="card-text">Casos de prueba, matrices de trazabilidad y documentación de defectos funcionales.</p>
+              <p><strong>Tecnologías:</strong> Google Sheets, Docs</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://github.com/ericknator/qa-testing-docs" target="_blank" class="btn btn-outline-primary w-100">Ver repositorio</a>
             </div>
           </div>
         </div>
@@ -130,44 +205,21 @@
     <section id="contacto" data-aos="fade-up">
       <h2 class="text-primary border-bottom pb-2">Contacto</h2>
       <div class="d-flex flex-wrap gap-3 mb-4">
-        <a href="https://wa.me/51923612736" target="_blank" class="btn btn-success icon-hover">
+        <a href="https://wa.me/51923612736" target="_blank" class="btn btn-success">
           <i class="bi bi-whatsapp me-1"></i> WhatsApp
         </a>
-        <a href="https://www.linkedin.com/in/jesus-loayza/" target="_blank" class="btn btn-primary icon-hover">
+        <a href="https://www.linkedin.com/in/jesus-loayza/" target="_blank" class="btn btn-primary">
           <i class="bi bi-linkedin me-1"></i> LinkedIn
         </a>
       </div>
-      <div id="form-success" class="alert alert-success d-none" role="alert">
-        ✅ ¡Gracias! Tu mensaje fue enviado correctamente.
-        <button type="button" class="btn-close float-end" onclick="this.parentElement.classList.add('d-none')"></button>
-      </div>
-      <form id="contact-form" action="https://formspree.io/f/xzzrrkzd" method="POST" class="row g-3">
-        <div class="col-md-6">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" name="nombre" id="nombre" class="form-control" required>
-        </div>
-        <div class="col-md-6">
-          <label for="correo" class="form-label">Correo electrónico</label>
-          <input type="email" name="email" id="correo" class="form-control" required>
-        </div>
-        <div class="col-12">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea name="mensaje" id="mensaje" rows="5" class="form-control" required></textarea>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary w-100">📨 Enviar mensaje</button>
-        </div>
-      </form>
     </section>
   </main>
 
   <button id="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
   <footer>
-    <p class="mb-1">
-      <i class="bi bi-code-slash me-2"></i>Hecho con ❤️ por Erick Loayza
-    </p>
-    <p class="small text-muted mb-0">© 2025 Erick Loayza – Todos los derechos reservados.</p>
+    <p>📬 Contacto: erick.nordic@gmail.com</p>
+    <p>🌐 Visita mi estudio: <a href="https://nordicstudio.pe" target="_blank">nordicstudio.pe</a></p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -177,24 +229,6 @@
     const scrollTopBtn = document.getElementById('scroll-top');
     window.addEventListener('scroll', () => {
       scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    const form = document.getElementById('contact-form');
-    const successMessage = document.getElementById('form-success');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          successMessage.classList.remove('d-none');
-          form.reset();
-        } else {
-          alert('❌ Hubo un error al enviar tu mensaje. Inténtalo más tarde.');
-        }
-      });
     });
   </script>
 </body>
