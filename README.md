@@ -28,10 +28,11 @@ Todos estos proyectos están disponibles en mi portafolio técnico y muchos de e
 ## 🧰 Tecnologías que manejo
 
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap, Tailwind, Angular, React
-- **Backend & Automatización:** Google Apps Script, Zapier, Make, Firebase
-- **Bases de datos:** SQLite, Google Sheets como DB operativa
-- **Versionado & documentación:** Git, GitHub, Markdown
-- **Diseño UX/UI:** Figma (básico), Webflow (exploración)
+- **Backend / Automatización:** Python (básico), Google Apps Script, Zapier, Make
+- **Mobile:** Android Studio (Java/Kotlin), Firebase
+- **Gestión de datos:** Google Sheets, Forms, SQLite, Airtable
+- **Diseño:** Figma (básico), Canva
+- **Versionamiento:** Git, GitHub
 
 ---
 
@@ -53,6 +54,7 @@ Todos estos proyectos están disponibles en mi portafolio técnico y muchos de e
 
 > 🔗 Podés ver este portafolio online en:  
 > **[ericknator.github.io/Portafolio](https://ericknator.github.io/Portafolio)**
+> - 🧊 Nordic Studio (sitio profesional): [nordicstudio.pe](https://nordic-studio.netlify.app/)
 
 ---
 
